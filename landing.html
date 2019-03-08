@@ -1,8 +1,94 @@
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Fonts import -->
+<link href="https://fonts.googleapis.com/css?family=Caveat|Economica|Patrick+Hand|Permanent+Marker|Special+Elite|quicksand|roboto+mono|cabin" rel="stylesheet">
+<!-- Import Google Icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!-- Bootstrap -->
+<meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+body {
+	margin: auto;
+	background-color: #eaeaea;
+	}
+.skills{
+	text-align: center;}
+	
+.skills i {
+  display: block;
+  margin: auto;
+  width: 45px;
+}
+
+.bulletheader {
+	font-size: 45px;
+	font-family: 'roboto mono';
+	text-align: center;
+	font-weight: bold;
+	padding: 0px 0 50px 0;}
+
+hr {
+	margin-bottom: 3em;
+	width: 15%;
+	border-color: #C5B358;}
+
+</style>  
+  
+</head>
+
+<div class="skills" style="width: 100%; background-color: white; padding-top: 30px; padding-bottom: 30px;">
+<p class="bulletheader" id="skills-header";>Guestbook Landing Page</p>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<hr>
+				<i class="material-icons md-48";>comment</i>
+				<h2 class="h3">Add to Guestbook</h2>
+					<form action="submit.php" method="post">
+						First Name:<br>
+						<input type="text" name="firstname" >
+						<br>
+						Last Name: <br>
+						<input type="text" name="lastname" >
+						<br>
+						Comment: <br>
+						<input type="text" name="comment" >
+						<br>
+						<input type="submit" value="Submit">
+					</form>
+			</div>
+
+			<div class="col-sm-4">
+				<hr>
+				<i class="material-icons md-48">search</i>
+				<h2 class="h3">Search Guestbook</h2>
+					<form action="searchresults.php" method="POST">
+					Name:<br>
+					<input type="text" name="searchnametwo">
+					<br>
+					<input type="submit" value="Submit">
+					</form>
+			</div>
+
+			<div class="col-sm-4">
+				<hr>
+				<i class="material-icons md-48">view_list</i>
+				<h2 class="h3">View Guestbook</h2>
+					<form action="viewall.php" method="POST">
+					<br><input type="submit" value="View All">
+					</form>
+			</div>
+		</div>	
+	</div>
+</div>
+
 
 <body>
-<a href="addtodb.php">Add to DB</a>
-<a href="search.php">search</a>
 
 </body>
 </html>
