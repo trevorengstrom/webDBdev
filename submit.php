@@ -1,10 +1,11 @@
 <html>
-<h1> These are the results </h1>
+
 </html>
 
 <?php
 $x=$_POST['firstname'];
 $y=$_POST['lastname'];
+$z=$_POST['comment'];
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -17,9 +18,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
 	die("connection failed:" . $conn->connect_error);
 }
-echo "Connected Successfully";
+//echo "Connected Successfully";
 
-$sql = "INSERT INTO `user` (`fname`, `lname`)  VALUES('$x', '$y')";  
+$sql = "INSERT INTO `user` (`fname`, `lname`, `comments`)  VALUES('$x', '$y', '$z')";  
 
 if ($conn->query($sql) === TRUE) {
 	echo "New record created successfully";
@@ -27,11 +28,12 @@ if ($conn->query($sql) === TRUE) {
 	echo "Error: " . $sql . "<br>" , $conn->error;
 }
 
-$sql = "SELECT id, fname, lname FROM user";
+/*
+$sql = "SELECT id, fname, lname, comments, datenow FROM user where fname";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-	echo "<table>";
+	echo "<table border=1  cellspacing=0 cellpading=0>";
 		while($row = $result->fetch_assoc()) {
 			echo "<tr><td> id: " . $row["id"]. " </td><td> Name: " . $row["fname"]. " " . $row["lname"]. "</td></tr>";
 		}
@@ -40,7 +42,7 @@ echo "</table>";
 	echo "0 results";
 }
 
-
+*/
 
 $conn->close();
 ?>
