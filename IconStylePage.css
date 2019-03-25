@@ -43,3 +43,26 @@ ul li a:hover:before
 {
 	top: 0;
 }
+
+.team{
+	text-align: center;
+	width: 100%;
+}
+	
+.team img {
+  display: block;
+  margin: auto;
+}
+
+.team ul li i {
+	display: block;
+	margin: auto;
+	width: 100%;
+}
+
+footer {
+  padding: 3em 0;
+  background: #111;
+    color: #C5B358;
+}
+
