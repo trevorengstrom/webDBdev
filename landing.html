@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Fonts import -->
+<link href="https://fonts.googleapis.com/css?family=Caveat|Economica|Patrick+Hand|Permanent+Marker|Special+Elite|quicksand|roboto+mono|cabin" rel="stylesheet">
+<!-- Import Google Icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!-- Bootstrap -->
+<meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link href="guestbookCSS.css" type="text/css" rel="stylesheet"/>
+<link href="IconStylePage.css" type="text/css" rel="stylesheet">  
+
+
+<title>Guestbook</title> 
+	
+</head>
+<body>
+<p class="bulletheader";>Guestbook Landing Page</p>
+<div class="landing">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<hr>
+				<i class="material-icons md-48";>comment</i>
+				<h2 class="h3">Add to Guestbook</h2>
+					<form action="submitSecure.php" method="post">
+						First Name:<br>
+						<input type="text" name="firstName" >
+						<br>
+						Last Name: <br>
+						<input type="text" name="lastName" >
+						<br>
+						Comment: <br>
+						<input type="text" name="comment" >
+						<br>
+						<input type="submit" value="Submit">
+					</form>
+			</div>
+
+			<div class="col-sm-4">
+				<hr>
+				<i class="material-icons md-48">search</i>
+				<h2 class="h3">Search Guestbook</h2>
+					<form action="searchresultsSecure.php" method="POST">
+					Name:<br>
+					<input type="text" name="searchnametwo">
+					<br>
+					<input type="submit" value="Search">
+					</form>
+			</div>
+
+			<div class="col-sm-4">
+				<hr>
+				<i class="material-icons md-48">view_list</i>
+				<h2 class="h3">View Guestbook</h2>
+					<form action="viewall.php" method="POST">
+					<br><input type="submit" value="View All">
+					</form>
+			</div>
+		</div>	
+	</div>
+</div>
+</html>
