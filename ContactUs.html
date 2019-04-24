@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#header ul {
+	font-family: 'times new roman', Arial, Helvetica, sans-serif;
+	float: right;
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 10px 36px 0 0;
+}
+#header ul li {
+	border-left: 1px solid #3e3e3e;
+	float: left;
+	height: 25px;
+	padding: 0 15px;
+}
+#header ul li.current a,
+#header ul li a:hover {
+	color: #383838;
+}
+#header ul li:first-child {
+	border: none;
+}
+#header ul li a {
+	color: #868686;
+	display: block;
+	letter-spacing: 0.075em;
+	line-height: 20px;
+	text-decoration: none;
+}	
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Contact us</h2>
+
+
+
+
+
+
+
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <a class="navbar-brand" href="#"></a>
+		 
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="header">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="HomePageV2.html">Home<span class="sr-only"></span></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="HomePageV2.html">About Us</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="landing.html">Guestbook</a>
+			  </li>
+
+
+  
+
+<div class="container">
+  <div style="text-align:center">
+  
+  
+    <h2>Contact Trevor</h2>
+    <p>To contact Trevor fill out the information below</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="trevor.png" style="width:60%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="usa">USA</option>
+          <option value="canada">Canada</option>
+        
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Elijah</h2>
+    <p>To contact Elijah fill out the information below:</p>
+  </div>
+  <div class="row">
+    <div class="column" >
+      <img src="images1.jpg" class="img-fluid" style="width:60%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+        
+      <option value="usa">USA</option>
+          <option value="canada">Canada</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Jacob</h2>
+    <p>To contact Jacob fill out the information below:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="JacobPic.Jpeg" style="width:60%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          
+          <option value="usa">USA</option>
+          <option value="canada">Canada</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
