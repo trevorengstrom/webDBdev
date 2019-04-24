@@ -1,0 +1,188 @@
+<html>
+<head>
+<style>
+body {
+	color: black;
+	font-family: helvetica;
+	background-color: #e2e2e2;
+}
+
+table {
+	text-align: left;
+	padding-bottom: 100;
+}
+
+th {
+	border-bottom: 1px solid #C5B358;
+	padding: 10;
+}
+
+td {
+	border-bottom: 1px solid #C5B358;
+	padding: 10px;
+}
+
+tr:hover {
+	background-color: #f5f5f5;
+}
+
+</style>
+</head>
+<body>
+
+<?php
+
+print "<h4 style = \" text-align: right ;\">Trevor Engstrom<br>CSC 345<br>Assignment Four</h4>"; 
+print "<h1 style = \" text-align: center ;\">4.1</h1>";   
+
+$v1 = 1;
+$v2 = 2;
+
+echo "<table>
+	<tr>
+		<th>Operation</th>
+		<th>V1</th>
+		<th>V2</th>
+	</tr>";
+echo "<tr>
+		<td></td>
+		<td>$v1</td>
+		<td>$v2</td>
+	</tr>";
+$v1--;
+echo "<tr>
+		<td>--v1</td>
+		<td>$v1</td>
+		<td>$v2</td>
+	</tr>";
+$v1=--$v1/$v2; 
+echo "<tr>
+		<td>v1=--v1/v2</td>
+		<td>$v1</td>
+		<td>$v2</td>
+	</tr>";
+$v1=($v2*3)+14.5;
+echo "<tr>
+		<td>v1=(v2*3)+14.5</td>
+		<td>$v1</td>
+		<td>$v2</td>
+	</tr>";
+$v2 +=$v1;
+echo "<tr>
+		<td>v2 +=v1</td>
+		<td>$v1</td>
+		<td>$v2</td>
+	</tr>";
+$v2 *= $v2;
+echo "<tr>
+		<td>v2 *= v2</td>
+		<td>$v1</td>
+		<td>$v2</td>
+	</tr>";
+echo "</table>";	
+
+
+print "<h1 style = \" text-align: center ;\">4.2</h1>";
+
+$height = 66;
+$weight = 110;
+$bmi = 0;
+
+function bmi($height, $weight) {
+	$bmi=(($weight*703)/($height*$height));
+	
+	switch($bmi) {
+		case $bmi < 18.5:
+			$bmiResult = "Underweight";
+			break;
+		case $bmi >= 18.5 && $bmi < 25:
+			$bmiResult = "Normal";
+			break;
+		case $bmi >= 25 && $bmi < 30:
+			$bmiResult = "Overweight";
+			break;
+		case $bmi >=30:
+			$bmiResult = "Obese";
+			break;			
+		default: 
+			$bmiResult = "Unknown";
+	}	
+	return $bmiResult;
+}
+
+echo "<table>
+	<tr>
+		<th>Height</th>
+		<th>Weight</th>
+		<th>BMI</th>
+	</tr>";
+for ($i=0; $i<4; $i++) {
+	$returnBmi = bmi($height, $weight);
+	echo "<tr>
+		<td>$height</td>
+		<td>$weight</td>
+		<td>$returnBmi</td>
+	</tr>";
+	$height -= 1;
+	$weight += 20;
+}	
+echo "</table>";	
+
+print "<h1 style = \" text-align: center ;\">4.3</h1>";
+
+function circles($p) {
+	echo "<table>
+		<tr>
+			<th>Radius</th>
+			<th>Circumference</th>
+			<th>Area</th>
+		</tr>";
+		
+	for ($i=0; $p>=$i; $i++) {
+		$radius = $i;
+		$circum = 2*3.14*$radius;
+		$area = 3.14*($radius*$radius);
+		echo "<tr>
+			<td>$radius</td>
+			<td>$circum</td>
+			<td>$area</td>
+		</tr>";
+	}
+	echo "</table>";	
+}
+
+circles(5);
+circles(10);
+
+print "<h1 style = \" text-align: center ;\">4.4</h1>";
+
+
+function circlesWhile($a) {
+$b = 0;
+	echo "<table>
+		<tr>
+			<th>Radius</th>
+			<th>Circumference</th>
+			<th>Area</th>
+		</tr>";
+	while($a>=$b) {
+		$radius = $b;
+		$circum = 2*3.14*$radius;
+		$area = 3.14*($radius*$radius);
+		echo "<tr>
+			<td>$radius</td>
+			<td>$circum</td>
+			<td>$area</td>
+		</tr>";
+		$b++;
+	}
+	echo "</table>";	
+}
+
+circlesWhile(6);
+circlesWhile(8);
+
+?>
+
+</body>
+</html>
